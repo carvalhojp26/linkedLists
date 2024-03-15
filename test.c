@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "types.h"  
+#include <stdbool.h>
  
 Node* createNode(int data) {
     Node* newNode = (Node*)malloc(sizeof(Node)); //aloca a memoria para o novo no
@@ -299,40 +300,61 @@ void printList(Node* head) {
     }
 }
 
-int maxSumUtil(Node* head, bool* visited, int N, int currentRow, int currentSum) {
-    if (currentRow == N) {
-        // Base case: todas as linhas foram consideradas
-        return currentSum;
+int maxSum = 0;
+
+void calculateMaxSumUtil(Node* row, int* visited, int currentSum, int* maxSum, int numRows) {
+    if (row == NULL) {
+        if (currentSum > *maxSum) {
+            *maxSum = currentSum;
+        }
+        return;
     }
 
-    int maxSum = 0;
-    Node* col = head;
+    Node* col = row;
     int colIndex = 0;
     while (col != NULL) {
         if (!visited[colIndex]) {
-            visited[colIndex] = true; // Marcar a coluna como visitada
-            int sum = maxSumUtil(head->down, visited, N, currentRow + 1, currentSum + col->data);
-            if (sum > maxSum) {
-                maxSum = sum; // Atualizar a soma máxima
-            }
-            visited[colIndex] = false; // Desmarcar para outras combinações
+            visited[colIndex] = 1;
+            calculateMaxSumUtil(row->down, visited, currentSum + col->data, maxSum, numRows);
+            visited[colIndex] = 0;
         }
         col = col->right;
         colIndex++;
     }
-    
+}
+
+int calculateMaxSum(Node* head, int numRows) {
+    int* visited = (int*)calloc(numRows, sizeof(int));
+    int maxSum = 0;
+    calculateMaxSumUtil(head, visited, 0, &maxSum, numRows);
+    free(visited);
     return maxSum;
 }
 
-int findMaxSum(Node* head, int N) {
-    bool visited[N]; // Rastrear colunas visitadas
-    for (int i = 0; i < N; i++) visited[i] = false;
-    return maxSumUtil(head, visited, N, 0, 0);
+void getDimensions(Node* head, int* numRows, int* numCols) {
+    *numRows = 0;
+    *numCols = 0;
+    Node* row = head;
+    if (row) {
+        *numRows = 1;
+        Node* col = row;
+        while (col->right) {
+            (*numCols)++;
+            col = col->right;
+        }
+        (*numCols)++; // Conta a primeira coluna
+        while (row->down) {
+            (*numRows)++;
+            row = row->down;
+        }
+    }
 }
 
 int main() {
     char* filename = "data.txt";
+    int numRows, numCols;
     Node* list = readFile(filename);
+
     printList(list);
 
     printf("\n");
@@ -356,16 +378,47 @@ int main() {
     printf("Lista após adicionar nova coluna:\n");
     printList(list);
 
-    removeRow(list, 5, filename);
-    printf("Lista após remover linha:\n");
-    printList(list);
-
-    removeColumn(list, 5, filename);
-    printf("Lista após remover coluna:\n");
-    printList(list);
 
     printf("\n");
   
+    // Verifica se a matriz é quadrada
+    if (numRows != numCols) {
+        int diff = abs(numRows - numCols);
+        int zeroData[diff]; // Array preenchido com zeros
+        memset(zeroData, 0, sizeof(zeroData));
+
+        if (numRows < numCols) {
+            // Adiciona linhas de zeros
+            for (int i = 0; i < diff; i++) {
+                head = addRow(head, zeroData, numCols, "matrix.txt"); // Atualize o nome do arquivo conforme necessário
+            }
+        } else {
+            // Adiciona colunas de zeros
+            addColumn(head, zeroData, "matrix.txt"); // Atualize o nome do arquivo conforme necessário
+        }
+    }
+
+    // Calcula a soma máxima
+    int maxSum = calculateMaxSum(head, numRows > numCols ? numRows : numCols);
+
+    // Remove as linhas/colunas de zeros adicionadas, se necessário
+    if (numRows != numCols) {
+        int diff = abs(numRows - numCols);
+        if (numRows < numCols) {
+            // Remove as linhas adicionadas
+            for (int i = 0; i < diff; i++) {
+                head = removeRow(head, numRows + i, "matrix.txt"); // Atualize o índice conforme necessário
+            }
+        } else {
+            // Remove as colunas adicionadas
+            for (int i = 0; i < diff; i++) {
+                removeColumn(head, numCols, "matrix.txt"); // Atualize o índice conforme necessário
+            }
+        }
+    }
+
+    printf("Soma máxima: %d\n", maxSum);
+
     // Lembre-se de liberar a memória depois
     return 0;
 }
