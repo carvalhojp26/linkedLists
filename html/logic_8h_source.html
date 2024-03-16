@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho-EDA 2023/2024: Código-Fonte de src/logic.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ipca.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabalho-EDA 2023/2024
+   </div>
+   <div id="projectbrief">Documentação do trabalho de fim de periodo da disciplina de Estrutura de Dados Avançados.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">logic.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="logic_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LOGIC_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LOGIC_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="logic_8h.html#a12ed6826106093af1698d49ffeb6d298">updateValue</a>(<a class="code hl_struct" href="structNode.html">Node</a>* head, <span class="keywordtype">int</span> oldValue, <span class="keywordtype">int</span> newValue);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><a class="code hl_struct" href="structNode.html">Node</a>* <a class="code hl_function" href="logic_8h.html#a2d85949356e14c170d573775b4021bf2">addRow</a>(<a class="code hl_struct" href="structNode.html">Node</a>* head, <span class="keywordtype">int</span> rowData[], <span class="keywordtype">int</span> size, <span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="logic_8h.html#a06afd32182b21d56da67facf1133f391">addColumn</a>(<a class="code hl_struct" href="structNode.html">Node</a>* head, <span class="keywordtype">int</span> columnData[], <span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><a class="code hl_struct" href="structNode.html">Node</a>* <a class="code hl_function" href="logic_8h.html#a6be1625af37b04b50c220f95a394f4ec">removeRow</a>(<a class="code hl_struct" href="structNode.html">Node</a>* head, <span class="keywordtype">int</span> rowIndex, <span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> <a class="code hl_function" href="logic_8h.html#a0c4da4391039f715b8ca6b8c5fa36ddb">removeColumn</a>(<a class="code hl_struct" href="structNode.html">Node</a>* head, <span class="keywordtype">int</span> columnIndex, <span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keywordtype">int</span> <a class="code hl_function" href="logic_8h.html#a4f617da86e4bc9f6ab6e5b404cdb197c">calculateMaxSum</a>(<a class="code hl_struct" href="structNode.html">Node</a>* head, <span class="keywordtype">int</span> numRows);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="alogic_8h_html_a06afd32182b21d56da67facf1133f391"><div class="ttname"><a href="logic_8h.html#a06afd32182b21d56da67facf1133f391">addColumn</a></div><div class="ttdeci">void addColumn(Node *head, int columnData[], const char *filename)</div><div class="ttdoc">Adiciona uma nova coluna ao final de cada linha da matriz.</div><div class="ttdef"><b>Definition:</b> logic.c:86</div></div>
+<div class="ttc" id="alogic_8h_html_a0c4da4391039f715b8ca6b8c5fa36ddb"><div class="ttname"><a href="logic_8h.html#a0c4da4391039f715b8ca6b8c5fa36ddb">removeColumn</a></div><div class="ttdeci">void removeColumn(Node *head, int columnIndex, const char *filename)</div><div class="ttdoc">Remove uma coluna específica da matriz.</div><div class="ttdef"><b>Definition:</b> logic.c:152</div></div>
+<div class="ttc" id="alogic_8h_html_a12ed6826106093af1698d49ffeb6d298"><div class="ttname"><a href="logic_8h.html#a12ed6826106093af1698d49ffeb6d298">updateValue</a></div><div class="ttdeci">void updateValue(Node *head, int oldValue, int newValue)</div><div class="ttdoc">Atualiza o primeiro nó encontrado com um valor específico na matriz 2D ligada.</div><div class="ttdef"><b>Definition:</b> logic.c:25</div></div>
+<div class="ttc" id="alogic_8h_html_a2d85949356e14c170d573775b4021bf2"><div class="ttname"><a href="logic_8h.html#a2d85949356e14c170d573775b4021bf2">addRow</a></div><div class="ttdeci">Node * addRow(Node *head, int rowData[], int size, const char *filename)</div><div class="ttdoc">Adiciona uma nova linha à matriz representada por uma lista ligada 2D.</div><div class="ttdef"><b>Definition:</b> logic.c:54</div></div>
+<div class="ttc" id="alogic_8h_html_a4f617da86e4bc9f6ab6e5b404cdb197c"><div class="ttname"><a href="logic_8h.html#a4f617da86e4bc9f6ab6e5b404cdb197c">calculateMaxSum</a></div><div class="ttdeci">int calculateMaxSum(Node *head, int numRows)</div><div class="ttdoc">Calcula a soma máxima de uma seleção de nós em uma matriz bidimensional representada por uma lista li...</div><div class="ttdef"><b>Definition:</b> logic.c:201</div></div>
+<div class="ttc" id="alogic_8h_html_a6be1625af37b04b50c220f95a394f4ec"><div class="ttname"><a href="logic_8h.html#a6be1625af37b04b50c220f95a394f4ec">removeRow</a></div><div class="ttdeci">Node * removeRow(Node *head, int rowIndex, const char *filename)</div><div class="ttdoc">Remove uma linha específica da matriz.</div><div class="ttdef"><b>Definition:</b> logic.c:110</div></div>
+<div class="ttc" id="astructNode_html"><div class="ttname"><a href="structNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> types.h:4</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

@@ -7,6 +7,29 @@
 #include <stddef.h>
 #include "logic.h"
 
+/**
+ * @file utils.c
+ * @brief Fornece funções utilitárias para a manipulação de uma matriz representada como uma lista ligada bidimensional.
+ *
+ * Este arquivo contém a implementação de várias funções utilitárias que apoiam a manipulação e visualização da matriz,
+ * incluindo a criação de novos nós, leitura e escrita de matrizes em arquivos, impressão da matriz no console, obtenção
+ * das dimensões da matriz, ajuste da matriz para garantir que seja quadrada e cálculo auxiliar para a soma máxima.
+ * Estas funções são essenciais para o funcionamento das funcionalidades oferecidas pelo programa, permitindo uma interação
+ * eficiente e eficaz com a estrutura de dados da matriz e com a persistência dos dados em arquivos.
+ *
+ * Principais funcionalidades incluídas:
+ * - `createNode`: Aloca e inicializa um novo nó para a lista ligada.
+ * - `readFile`: Lê uma matriz de um arquivo e constrói uma representação de lista ligada bidimensional.
+ * - `writeToFile`: Escreve a matriz atualizada em um arquivo, preservando as alterações feitas pelo usuário.
+ * - `printList`: Exibe a matriz atual no console em um formato de tabela fácil de ler.
+ * - `getDimensions`: Calcula e retorna as dimensões atuais da matriz.
+ * - `makeSquare`: Ajusta a matriz para ser quadrada, adicionando linhas ou colunas de zeros conforme necessário.
+ * - `calculateMaxSumUtil`: Função auxiliar utilizada para calcular a soma máxima de valores selecionados da matriz.
+ * - `clearInputBuffer`: Limpa o buffer de entrada para evitar leituras indesejadas durante a coleta de entrada do usuário.
+ *
+ * Estas funções proporcionam uma base sólida para a realização de operações complexas sobre a matriz de maneira simples e direta.
+ */
+
 Node* createNode(int data) {
     Node* newNode = (Node*)malloc(sizeof(Node)); //aloca a memoria para o novo no
     if (!newNode) {
@@ -126,6 +149,7 @@ void printList(Node* head) {
         printf("+\n"); // Fecha a linha inferior da tabela
     }
 }
+
 
 void getDimensions(Node *head, int *numRows, int *numCols) {
     *numRows = 0;

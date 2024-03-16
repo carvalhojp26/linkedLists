@@ -1,0 +1,34 @@
+# Doxyfile 1.9.1
+
+# Project related settings
+PROJECT_NAME           = "Trabalho-EDA 2023/2024"
+PROJECT_BRIEF          = "Documentação do trabalho de fim de periodo da disciplina de Estrutura de Dados Avançados."
+PROJECT_ICON           = "images/ipca.jpg"
+PROJECT_LOGO           = "images/ipca.jpg"
+
+# The directory where your source files are located.
+INPUT                  = src/
+
+OPTIMIZE_OUTPUT_FOR_C  = YES
+# File patterns to include
+FILE_PATTERNS          = *.c *.h
+
+# Latex options
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+LATEX_OUTPUT           = latex
+
+# Other settings that might be useful for C projects
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+SOURCE_BROWSER         = NO
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+REFERENCED_BY_COMPOUND = YES
+REFERENCES_COMPOUND    = YES
+RECURSIVE              = YES
+EXCLUDE_SYMLINKS       = YES
+IMAGE_PATH             = images/
+OUTPUT_LANGUAGE        = Portuguese

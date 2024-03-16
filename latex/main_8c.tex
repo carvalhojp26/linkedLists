@@ -1,0 +1,47 @@
+\hypertarget{main_8c}{}\doxysection{Referência ao ficheiro src/main.c}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Ponto de entrada principal para a aplicação de manipulação de matrizes.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}logic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ponto de entrada principal para a aplicação de manipulação de matrizes. 
+
+Este arquivo contém a função {\ttfamily main}, que serve como o ponto de entrada para uma aplicação que manipula uma matriz armazenada em um arquivo de texto (\char`\"{}data.\+txt\char`\"{}). A matriz é representada internamente como uma lista ligada bidimensional. O programa oferece ao usuário um menu de opções para visualizar a matriz, alterar elementos, adicionar ou remover linhas/colunas, e calcular a soma máxima sob certas condições.
+
+As operações disponíveis são\+:
+\begin{DoxyItemize}
+\item Visualizar a matriz atual.
+\item Atualizar um valor específico dentro da matriz.
+\item Adicionar uma nova linha com valores especificados pelo usuário.
+\item Adicionar uma nova coluna com valores especificados pelo usuário.
+\item Remover uma linha selecionada pelo usuário.
+\item Remover uma coluna selecionada pelo usuário.
+\item Calcular e exibir a soma máxima de uma seleção de valores da matriz.
+\end{DoxyItemize}
+
+O loop principal do programa apresenta essas opções em um menu, executa a escolha do usuário e repete até que a opção de sair seja selecionada. Após a execução de cada operação, o usuário é solicitado a pressionar Enter para continuar, permitindo a visualização dos resultados ou mensagens de status. 
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Referências \mbox{\hyperlink{utils_8c_ad53f3f841d53ad195c5f8e27eaca880d}{print\+List()}}, \mbox{\hyperlink{utils_8c_ab3ed50dcca1da8b534f3889917f7db13}{read\+File()}}, \mbox{\hyperlink{menu_8c_af48df06705af95435adfab441132ccb8}{request\+Add\+Column()}}, \mbox{\hyperlink{menu_8c_a9afb2edea4b2c989f3c8ec396d9edc3b}{request\+Add\+Row()}}, \mbox{\hyperlink{menu_8c_aaa9183693b51b20c09b87f650702662e}{request\+Calculate\+Max\+Sum()}}, \mbox{\hyperlink{menu_8c_a63bf929c512eb27e46af86f9fd9b2b62}{request\+Remove\+Column()}}, \mbox{\hyperlink{menu_8c_aeba29f48046200a3685c0a8db4a74b18}{request\+Remove\+Row()}}, \mbox{\hyperlink{menu_8c_ad5cb3b2840ca6abfff55aa0197efdf6c}{request\+Update\+Value()}}, \mbox{\hyperlink{menu_8c_a5b1b32f0eea46571499df2ac1483f16e}{show\+Menu\+And\+Get\+Choice()}} e \mbox{\hyperlink{menu_8c_a003c17231846735a683b69486c821f9f}{wait\+For\+User\+Input()}}.
+

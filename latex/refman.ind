@@ -1,0 +1,189 @@
+\begin{theindex}
+
+  \item {addColumn}
+    \subitem {logic.c}, \hyperpage{8}
+    \subitem {logic.h}, \hyperpage{12}
+  \item {addRow}
+    \subitem {logic.c}, \hyperpage{8}
+    \subitem {logic.h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {calculateMaxSum}
+    \subitem {logic.c}, \hyperpage{9}
+    \subitem {logic.h}, \hyperpage{13}
+  \item {calculateMaxSumUtil}
+    \subitem {utils.c}, \hyperpage{29}
+    \subitem {utils.h}, \hyperpage{33}
+  \item {clearInputBuffer}
+    \subitem {utils.c}, \hyperpage{29}
+    \subitem {utils.h}, \hyperpage{34}
+  \item {clearScreen}
+    \subitem {menu.c}, \hyperpage{18}
+    \subitem {menu.h}, \hyperpage{22}
+  \item {createNode}
+    \subitem {utils.c}, \hyperpage{29}
+    \subitem {utils.h}, \hyperpage{34}
+
+  \indexspace
+
+  \item {data}
+    \subitem {Node}, \hyperpage{5}
+  \item {down}
+    \subitem {Node}, \hyperpage{5}
+
+  \indexspace
+
+  \item {getDimensions}
+    \subitem {utils.c}, \hyperpage{30}
+    \subitem {utils.h}, \hyperpage{34}
+
+  \indexspace
+
+  \item {logic.c}
+    \subitem {addColumn}, \hyperpage{8}
+    \subitem {addRow}, \hyperpage{8}
+    \subitem {calculateMaxSum}, \hyperpage{9}
+    \subitem {removeColumn}, \hyperpage{10}
+    \subitem {removeRow}, \hyperpage{10}
+    \subitem {updateValue}, \hyperpage{11}
+  \item {logic.h}
+    \subitem {addColumn}, \hyperpage{12}
+    \subitem {addRow}, \hyperpage{12}
+    \subitem {calculateMaxSum}, \hyperpage{13}
+    \subitem {removeColumn}, \hyperpage{14}
+    \subitem {removeRow}, \hyperpage{14}
+    \subitem {updateValue}, \hyperpage{15}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.c}, \hyperpage{16}
+  \item {main.c}
+    \subitem {main}, \hyperpage{16}
+  \item {makeSquare}
+    \subitem {utils.c}, \hyperpage{30}
+    \subitem {utils.h}, \hyperpage{35}
+  \item {maxSum}
+    \subitem {utils.c}, \hyperpage{32}
+  \item {menu.c}
+    \subitem {clearScreen}, \hyperpage{18}
+    \subitem {requestAddColumn}, \hyperpage{18}
+    \subitem {requestAddRow}, \hyperpage{19}
+    \subitem {requestCalculateMaxSum}, \hyperpage{19}
+    \subitem {requestRemoveColumn}, \hyperpage{20}
+    \subitem {requestRemoveRow}, \hyperpage{20}
+    \subitem {requestUpdateValue}, \hyperpage{21}
+    \subitem {showMenuAndGetChoice}, \hyperpage{21}
+    \subitem {waitForUserInput}, \hyperpage{21}
+  \item {menu.h}
+    \subitem {clearScreen}, \hyperpage{22}
+    \subitem {requestAddColumn}, \hyperpage{22}
+    \subitem {requestAddRow}, \hyperpage{23}
+    \subitem {requestCalculateMaxSum}, \hyperpage{23}
+    \subitem {requestRemoveColumn}, \hyperpage{24}
+    \subitem {requestRemoveRow}, \hyperpage{24}
+    \subitem {requestUpdateValue}, \hyperpage{25}
+    \subitem {showMenuAndGetChoice}, \hyperpage{25}
+    \subitem {waitForUserInput}, \hyperpage{26}
+
+  \indexspace
+
+  \item {Node}, \hyperpage{5}
+    \subitem {data}, \hyperpage{5}
+    \subitem {down}, \hyperpage{5}
+    \subitem {right}, \hyperpage{5}
+    \subitem {types.h}, \hyperpage{27}
+
+  \indexspace
+
+  \item {printList}
+    \subitem {utils.c}, \hyperpage{31}
+    \subitem {utils.h}, \hyperpage{35}
+
+  \indexspace
+
+  \item {readFile}
+    \subitem {utils.c}, \hyperpage{31}
+    \subitem {utils.h}, \hyperpage{36}
+  \item {removeColumn}
+    \subitem {logic.c}, \hyperpage{10}
+    \subitem {logic.h}, \hyperpage{14}
+  \item {removeRow}
+    \subitem {logic.c}, \hyperpage{10}
+    \subitem {logic.h}, \hyperpage{14}
+  \item {requestAddColumn}
+    \subitem {menu.c}, \hyperpage{18}
+    \subitem {menu.h}, \hyperpage{22}
+  \item {requestAddRow}
+    \subitem {menu.c}, \hyperpage{19}
+    \subitem {menu.h}, \hyperpage{23}
+  \item {requestCalculateMaxSum}
+    \subitem {menu.c}, \hyperpage{19}
+    \subitem {menu.h}, \hyperpage{23}
+  \item {requestRemoveColumn}
+    \subitem {menu.c}, \hyperpage{20}
+    \subitem {menu.h}, \hyperpage{24}
+  \item {requestRemoveRow}
+    \subitem {menu.c}, \hyperpage{20}
+    \subitem {menu.h}, \hyperpage{24}
+  \item {requestUpdateValue}
+    \subitem {menu.c}, \hyperpage{21}
+    \subitem {menu.h}, \hyperpage{25}
+  \item {right}
+    \subitem {Node}, \hyperpage{5}
+
+  \indexspace
+
+  \item {showMenuAndGetChoice}
+    \subitem {menu.c}, \hyperpage{21}
+    \subitem {menu.h}, \hyperpage{25}
+  \item {src/logic.c}, \hyperpage{7}
+  \item {src/logic.h}, \hyperpage{11}, \hyperpage{15}
+  \item {src/main.c}, \hyperpage{16}
+  \item {src/menu.c}, \hyperpage{17}
+  \item {src/menu.h}, \hyperpage{22}, \hyperpage{26}
+  \item {src/types.h}, \hyperpage{27}
+  \item {src/utils.c}, \hyperpage{27}
+  \item {src/utils.h}, \hyperpage{33}, \hyperpage{37}
+
+  \indexspace
+
+  \item {types.h}
+    \subitem {Node}, \hyperpage{27}
+
+  \indexspace
+
+  \item {updateValue}
+    \subitem {logic.c}, \hyperpage{11}
+    \subitem {logic.h}, \hyperpage{15}
+  \item {utils.c}
+    \subitem {calculateMaxSumUtil}, \hyperpage{29}
+    \subitem {clearInputBuffer}, \hyperpage{29}
+    \subitem {createNode}, \hyperpage{29}
+    \subitem {getDimensions}, \hyperpage{30}
+    \subitem {makeSquare}, \hyperpage{30}
+    \subitem {maxSum}, \hyperpage{32}
+    \subitem {printList}, \hyperpage{31}
+    \subitem {readFile}, \hyperpage{31}
+    \subitem {writeToFile}, \hyperpage{32}
+  \item {utils.h}
+    \subitem {calculateMaxSumUtil}, \hyperpage{33}
+    \subitem {clearInputBuffer}, \hyperpage{34}
+    \subitem {createNode}, \hyperpage{34}
+    \subitem {getDimensions}, \hyperpage{34}
+    \subitem {makeSquare}, \hyperpage{35}
+    \subitem {printList}, \hyperpage{35}
+    \subitem {readFile}, \hyperpage{36}
+    \subitem {writeToFile}, \hyperpage{36}
+
+  \indexspace
+
+  \item {waitForUserInput}
+    \subitem {menu.c}, \hyperpage{21}
+    \subitem {menu.h}, \hyperpage{26}
+  \item {writeToFile}
+    \subitem {utils.c}, \hyperpage{32}
+    \subitem {utils.h}, \hyperpage{36}
+
+\end{theindex}

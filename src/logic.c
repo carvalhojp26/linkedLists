@@ -5,6 +5,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * @file logic.c
+ * @brief Implementa as operações lógicas sobre a matriz representada por uma lista ligada bidimensional.
+ *
+ * Este arquivo contém as definições das funções responsáveis por manipular a matriz, incluindo atualização de valores,
+ * adição e remoção de linhas e colunas, e o cálculo da soma máxima sob certas condições. As operações são aplicadas sobre
+ * a estrutura de dados de lista ligada bidimensional, que permite a representação flexível de matrizes. As funções abordam:
+ * 
+ * - Atualização de um valor específico dentro da matriz (`updateValue`).
+ * - Adição de novas linhas (`addRow`) e colunas (`addColumn`) à matriz com dados especificados pelo usuário.
+ * - Remoção de linhas (`removeRow`) e colunas (`removeColumn`) selecionadas pelo usuário da matriz.
+ * - Cálculo da soma máxima possível selecionando um elemento por linha e coluna sem repetições (`calculateMaxSum`).
+ * 
+ * Além disso, o arquivo lida com a escrita da matriz atualizada de volta ao arquivo após modificações, garantindo que as
+ * alterações sejam persistidas.
+ */
+
 void updateValue(Node* head, int oldValue, int newValue) {
     Node* row = head;
     Node* col = NULL;

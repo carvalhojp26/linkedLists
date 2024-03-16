@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['readfile_0',['readFile',['../utils_8c.html#ab3ed50dcca1da8b534f3889917f7db13',1,'readFile(char *filename):&#160;utils.c'],['../utils_8h.html#ab3ed50dcca1da8b534f3889917f7db13',1,'readFile(char *filename):&#160;utils.c']]],
+  ['removecolumn_1',['removeColumn',['../logic_8c.html#a0c4da4391039f715b8ca6b8c5fa36ddb',1,'removeColumn(Node *head, int columnIndex, const char *filename):&#160;logic.c'],['../logic_8h.html#a0c4da4391039f715b8ca6b8c5fa36ddb',1,'removeColumn(Node *head, int columnIndex, const char *filename):&#160;logic.c']]],
+  ['removerow_2',['removeRow',['../logic_8c.html#a6be1625af37b04b50c220f95a394f4ec',1,'removeRow(Node *head, int rowIndex, const char *filename):&#160;logic.c'],['../logic_8h.html#a6be1625af37b04b50c220f95a394f4ec',1,'removeRow(Node *head, int rowIndex, const char *filename):&#160;logic.c']]],
+  ['requestaddcolumn_3',['requestAddColumn',['../menu_8c.html#af48df06705af95435adfab441132ccb8',1,'requestAddColumn(Node *head, const char *filename):&#160;menu.c'],['../menu_8h.html#af48df06705af95435adfab441132ccb8',1,'requestAddColumn(Node *head, const char *filename):&#160;menu.c']]],
+  ['requestaddrow_4',['requestAddRow',['../menu_8c.html#a9afb2edea4b2c989f3c8ec396d9edc3b',1,'requestAddRow(Node *head, const char *filename):&#160;menu.c'],['../menu_8h.html#a9afb2edea4b2c989f3c8ec396d9edc3b',1,'requestAddRow(Node *head, const char *filename):&#160;menu.c']]],
+  ['requestcalculatemaxsum_5',['requestCalculateMaxSum',['../menu_8c.html#aaa9183693b51b20c09b87f650702662e',1,'requestCalculateMaxSum(Node *head, const char *filename):&#160;menu.c'],['../menu_8h.html#aaa9183693b51b20c09b87f650702662e',1,'requestCalculateMaxSum(Node *head, const char *filename):&#160;menu.c']]],
+  ['requestremovecolumn_6',['requestRemoveColumn',['../menu_8c.html#a63bf929c512eb27e46af86f9fd9b2b62',1,'requestRemoveColumn(Node *head, const char *filename):&#160;menu.c'],['../menu_8h.html#a63bf929c512eb27e46af86f9fd9b2b62',1,'requestRemoveColumn(Node *head, const char *filename):&#160;menu.c']]],
+  ['requestremoverow_7',['requestRemoveRow',['../menu_8c.html#aeba29f48046200a3685c0a8db4a74b18',1,'requestRemoveRow(Node **head, const char *filename):&#160;menu.c'],['../menu_8h.html#aeba29f48046200a3685c0a8db4a74b18',1,'requestRemoveRow(Node **head, const char *filename):&#160;menu.c']]],
+  ['requestupdatevalue_8',['requestUpdateValue',['../menu_8c.html#ad5cb3b2840ca6abfff55aa0197efdf6c',1,'requestUpdateValue(Node *head):&#160;menu.c'],['../menu_8h.html#ad5cb3b2840ca6abfff55aa0197efdf6c',1,'requestUpdateValue(Node *head):&#160;menu.c']]],
+  ['right_9',['right',['../structNode.html#af99e7102380da88d7c079fa264230cf4',1,'Node']]]
+];

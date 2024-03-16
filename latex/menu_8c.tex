@@ -1,0 +1,270 @@
+\hypertarget{menu_8c}{}\doxysection{Referência ao ficheiro src/menu.c}
+\label{menu_8c}\index{src/menu.c@{src/menu.c}}
+
+
+Implementa a interface do usuário e as funções de solicitação para manipulação de matrizes.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}logic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8c_ad5cb3b2840ca6abfff55aa0197efdf6c}{request\+Update\+Value}} (\mbox{\hyperlink{structNode}{Node}} $\ast$head)
+\begin{DoxyCompactList}\small\item\em Solicita ao usuário valores para atualizar na matriz e aplica a atualização. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{menu_8c_a9afb2edea4b2c989f3c8ec396d9edc3b}{request\+Add\+Row}} (\mbox{\hyperlink{structNode}{Node}} $\ast$head, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Solicita ao usuário a inserção de uma nova linha na matriz e adiciona a linha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_af48df06705af95435adfab441132ccb8}{request\+Add\+Column}} (\mbox{\hyperlink{structNode}{Node}} $\ast$head, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Solicita ao usuário a inserção de uma nova coluna na matriz e a adiciona. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_aeba29f48046200a3685c0a8db4a74b18}{request\+Remove\+Row}} (\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$head, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Solicita ao usuário a remoção de uma linha específica da matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a63bf929c512eb27e46af86f9fd9b2b62}{request\+Remove\+Column}} (\mbox{\hyperlink{structNode}{Node}} $\ast$head, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Solicita ao usuário a remoção de uma coluna específica da matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_aaa9183693b51b20c09b87f650702662e}{request\+Calculate\+Max\+Sum}} (\mbox{\hyperlink{structNode}{Node}} $\ast$head, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Solicita o cálculo da soma máxima possível em uma matriz quadrada. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_8c_a5b1b32f0eea46571499df2ac1483f16e}{show\+Menu\+And\+Get\+Choice}} ()
+\begin{DoxyCompactList}\small\item\em Exibe o menu de opções para o usuário e obtém a escolha feita. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Limpa a tela do console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a003c17231846735a683b69486c821f9f}{wait\+For\+User\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Aguarda até que o usuário pressione Enter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementa a interface do usuário e as funções de solicitação para manipulação de matrizes. 
+
+Este arquivo contém a lógica de interface do usuário necessária para interagir com o programa de manipulação de matrizes. Inclui a exibição de um menu com várias opções, como alterar um valor na matriz, adicionar ou remover linhas/colunas e calcular a soma máxima. Cada opção do menu é vinculada a uma função específica que realiza a operação desejada, solicitando entradas adicionais do usuário quando necessário. As funções de solicitação facilitam a coleta de dados de entrada do usuário para essas operações e chamam as funções lógicas apropriadas definidas em outros arquivos do projeto para executar as ações requisitadas.
+
+Além das funções de solicitação, o arquivo define {\ttfamily clear\+Screen} e {\ttfamily wait\+For\+User\+Input}, que melhoram a experiência do usuário ao interagir com o menu e visualizar os resultados das operações executadas.
+
+Principais funções incluídas\+:
+\begin{DoxyItemize}
+\item {\ttfamily request\+Update\+Value}\+: Solicita ao usuário para atualizar um valor específico na matriz.
+\item {\ttfamily request\+Add\+Row}\+: Solicita ao usuário para adicionar uma nova linha na matriz.
+\item {\ttfamily request\+Add\+Column}\+: Solicita ao usuário para adicionar uma nova coluna na matriz.
+\item {\ttfamily request\+Remove\+Row}\+: Solicita ao usuário para remover uma linha específica da matriz.
+\item {\ttfamily request\+Remove\+Column}\+: Solicita ao usuário para remover uma coluna específica da matriz.
+\item {\ttfamily request\+Calculate\+Max\+Sum}\+: Solicita ao usuário para calcular e exibir a soma máxima conforme as condições definidas.
+\item {\ttfamily show\+Menu\+And\+Get\+Choice}\+: Exibe o menu principal e coleta a escolha do usuário.
+\item {\ttfamily clear\+Screen}\+: Limpa o terminal para uma visualização clara do menu e resultados.
+\item {\ttfamily wait\+For\+User\+Input}\+: Pausa a execução do programa até que o usuário pressione Enter, permitindo a visualização dos resultados. 
+\end{DoxyItemize}
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{menu_8c_a9d7e8af417b6d543da691e9c0e2f6f9f}\label{menu_8c_a9d7e8af417b6d543da691e9c0e2f6f9f}} 
+\index{menu.c@{menu.c}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily void clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa a tela do console. 
+
+Executa o comando apropriado para limpar a tela do console, dependendo do sistema operacional em uso. Utiliza \char`\"{}cls\char`\"{} para Windows (definido por \+\_\+\+WIN32) e \char`\"{}clear\char`\"{} para sistemas Unix-\/like (como Linux e mac\+OS). Esta função facilita a visualização das informações atualizadas no console, removendo saídas anteriores. 
+
+Referenciado por \mbox{\hyperlink{menu_8c_a5b1b32f0eea46571499df2ac1483f16e}{show\+Menu\+And\+Get\+Choice()}}.
+
+\mbox{\Hypertarget{menu_8c_af48df06705af95435adfab441132ccb8}\label{menu_8c_af48df06705af95435adfab441132ccb8}} 
+\index{menu.c@{menu.c}!requestAddColumn@{requestAddColumn}}
+\index{requestAddColumn@{requestAddColumn}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{requestAddColumn()}{requestAddColumn()}}
+{\footnotesize\ttfamily void request\+Add\+Column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{head,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Solicita ao usuário a inserção de uma nova coluna na matriz e a adiciona. 
+
+Após verificar que a lista não está vazia, a função obtém as dimensões atuais da matriz para determinar quantos valores são necessários para a nova coluna, equivalente ao número de linhas atual. O usuário é então solicitado a fornecer os valores para a nova coluna, que são lidos e armazenados em um array temporário. Utilizando esses valores, a função {\ttfamily add\+Column} é chamada para adicionar a nova coluna à matriz. Por fim, a função informa ao usuário que a nova coluna foi adicionada com sucesso.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em head} & Ponteiro para o nó cabeça da lista ligada bidimensional representando a matriz. \\
+\hline
+{\em filename} & Nome do arquivo onde a matriz atualizada será escrita após a adição da coluna. \\
+\hline
+\end{DoxyParams}
+
+
+Referências \mbox{\hyperlink{logic_8c_a06afd32182b21d56da67facf1133f391}{add\+Column()}} e \mbox{\hyperlink{utils_8c_afe12de1cfeeae80fcd71de4e5632d4b4}{get\+Dimensions()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\mbox{\Hypertarget{menu_8c_a9afb2edea4b2c989f3c8ec396d9edc3b}\label{menu_8c_a9afb2edea4b2c989f3c8ec396d9edc3b}} 
+\index{menu.c@{menu.c}!requestAddRow@{requestAddRow}}
+\index{requestAddRow@{requestAddRow}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{requestAddRow()}{requestAddRow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}} $\ast$ request\+Add\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{head,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Solicita ao usuário a inserção de uma nova linha na matriz e adiciona a linha. 
+
+Primeiro, verifica se a lista está vazia. Se não estiver, a função obtém as dimensões atuais da matriz para determinar quantos valores o usuário deve inserir para a nova linha. Em seguida, solicita ao usuário que forneça esses valores, um por um, armazenando-\/os em um array temporário. Após coletar todos os valores, chama a função {\ttfamily add\+Row} para adicionar efetivamente a nova linha à matriz com os valores fornecidos pelo usuário. A função retorna o ponteiro atualizado para a cabeça da lista ligada bidimensional.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em head} & Ponteiro para o nó cabeça da lista ligada bidimensional representando a matriz. \\
+\hline
+{\em filename} & Nome do arquivo onde a matriz atualizada será escrita. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para o nó cabeça atualizado da lista ligada bidimensional. 
+\end{DoxyReturn}
+
+
+Referências \mbox{\hyperlink{logic_8c_a2d85949356e14c170d573775b4021bf2}{add\+Row()}} e \mbox{\hyperlink{utils_8c_afe12de1cfeeae80fcd71de4e5632d4b4}{get\+Dimensions()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\mbox{\Hypertarget{menu_8c_aaa9183693b51b20c09b87f650702662e}\label{menu_8c_aaa9183693b51b20c09b87f650702662e}} 
+\index{menu.c@{menu.c}!requestCalculateMaxSum@{requestCalculateMaxSum}}
+\index{requestCalculateMaxSum@{requestCalculateMaxSum}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{requestCalculateMaxSum()}{requestCalculateMaxSum()}}
+{\footnotesize\ttfamily void request\+Calculate\+Max\+Sum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{head,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Solicita o cálculo da soma máxima possível em uma matriz quadrada. 
+
+Verifica inicialmente se a matriz não está vazia. Em seguida, ajusta a matriz para garantir que seja quadrada, adicionando linhas ou colunas de zeros se necessário. Após o ajuste, verifica novamente se a matriz é quadrada. Se sim, procede com o cálculo da soma máxima usando a função {\ttfamily calculate\+Max\+Sum}, que explora todas as combinações possíveis de seleção de valores sem repetir linhas ou colunas. O resultado é exibido ao usuário. Esta função pode ser utilizada para ajustar a matriz e realizar operações relacionadas a arquivos, como salvar a matriz ajustada, se necessário.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em head} & Ponteiro para o nó cabeça da lista ligada bidimensional representando a matriz. \\
+\hline
+{\em filename} & Nome do arquivo que pode ser usado para operações relacionadas ao arquivo, se necessário. \\
+\hline
+\end{DoxyParams}
+
+
+Referências \mbox{\hyperlink{logic_8c_a4f617da86e4bc9f6ab6e5b404cdb197c}{calculate\+Max\+Sum()}}, \mbox{\hyperlink{utils_8c_afe12de1cfeeae80fcd71de4e5632d4b4}{get\+Dimensions()}}, \mbox{\hyperlink{utils_8c_aeae3fa5e6cdf40c3604d4df9573cfb4e}{make\+Square()}} e \mbox{\hyperlink{utils_8c_a168e18330ed6960f927ae48ff8ff05a0}{max\+Sum}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\mbox{\Hypertarget{menu_8c_a63bf929c512eb27e46af86f9fd9b2b62}\label{menu_8c_a63bf929c512eb27e46af86f9fd9b2b62}} 
+\index{menu.c@{menu.c}!requestRemoveColumn@{requestRemoveColumn}}
+\index{requestRemoveColumn@{requestRemoveColumn}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{requestRemoveColumn()}{requestRemoveColumn()}}
+{\footnotesize\ttfamily void request\+Remove\+Column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{head,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Solicita ao usuário a remoção de uma coluna específica da matriz. 
+
+Primeiro, verifica se a matriz não está vazia. Se não estiver, a função obtém as dimensões atuais da matriz para informar ao usuário o número de colunas disponíveis. Em seguida, solicita ao usuário que forneça o índice da coluna que deseja remover. A função verifica a validade do índice fornecido. Se válido, {\ttfamily remove\+Column} é chamada para remover a coluna selecionada da matriz. Após a remoção, a função exibe uma mensagem confirmando o sucesso da operação.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em head} & Ponteiro para o nó cabeça da lista ligada bidimensional representando a matriz. \\
+\hline
+{\em filename} & Nome do arquivo onde a matriz atualizada será escrita. \\
+\hline
+\end{DoxyParams}
+
+
+Referências \mbox{\hyperlink{utils_8c_afe12de1cfeeae80fcd71de4e5632d4b4}{get\+Dimensions()}} e \mbox{\hyperlink{logic_8c_a0c4da4391039f715b8ca6b8c5fa36ddb}{remove\+Column()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\mbox{\Hypertarget{menu_8c_aeba29f48046200a3685c0a8db4a74b18}\label{menu_8c_aeba29f48046200a3685c0a8db4a74b18}} 
+\index{menu.c@{menu.c}!requestRemoveRow@{requestRemoveRow}}
+\index{requestRemoveRow@{requestRemoveRow}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{requestRemoveRow()}{requestRemoveRow()}}
+{\footnotesize\ttfamily void request\+Remove\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$}]{head,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Solicita ao usuário a remoção de uma linha específica da matriz. 
+
+Primeiro, verifica se a matriz não está vazia. Se não estiver, obtém as dimensões atuais da matriz para informar ao usuário quantas linhas existem. O usuário é solicitado a inserir o índice da linha que deseja remover. A função verifica se o índice fornecido é válido. Se for, a função {\ttfamily remove\+Row} é chamada para remover a linha selecionada, e o ponteiro para a cabeça da lista é atualizado caso necessário. Uma mensagem confirma a remoção bem-\/sucedida da linha.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em head} & Referência ao ponteiro para o nó cabeça da lista ligada bidimensional. \\
+\hline
+{\em filename} & Nome do arquivo onde a matriz atualizada será escrita. \\
+\hline
+\end{DoxyParams}
+
+
+Referências \mbox{\hyperlink{utils_8c_afe12de1cfeeae80fcd71de4e5632d4b4}{get\+Dimensions()}} e \mbox{\hyperlink{logic_8c_a6be1625af37b04b50c220f95a394f4ec}{remove\+Row()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\mbox{\Hypertarget{menu_8c_ad5cb3b2840ca6abfff55aa0197efdf6c}\label{menu_8c_ad5cb3b2840ca6abfff55aa0197efdf6c}} 
+\index{menu.c@{menu.c}!requestUpdateValue@{requestUpdateValue}}
+\index{requestUpdateValue@{requestUpdateValue}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{requestUpdateValue()}{requestUpdateValue()}}
+{\footnotesize\ttfamily void request\+Update\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+Solicita ao usuário valores para atualizar na matriz e aplica a atualização. 
+
+Interage com o usuário para obter um valor existente na matriz ({\ttfamily old\+Value}) e o valor que deve substituí-\/lo ({\ttfamily new\+Value}). Em seguida, chama a função {\ttfamily update\+Value} para procurar na matriz o {\ttfamily old\+Value} e substituí-\/lo pelo {\ttfamily new\+Value}. Após a conclusão da atualização, uma mensagem é exibida para informar ao usuário que a operação foi realizada com sucesso. Se o {\ttfamily old\+Value} não for encontrado na matriz, {\ttfamily update\+Value} cuidará de informar ao usuário.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em head} & Ponteiro para o nó cabeça da lista ligada bidimensional que representa a matriz. \\
+\hline
+\end{DoxyParams}
+
+
+Referências \mbox{\hyperlink{logic_8c_a12ed6826106093af1698d49ffeb6d298}{update\+Value()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\mbox{\Hypertarget{menu_8c_a5b1b32f0eea46571499df2ac1483f16e}\label{menu_8c_a5b1b32f0eea46571499df2ac1483f16e}} 
+\index{menu.c@{menu.c}!showMenuAndGetChoice@{showMenuAndGetChoice}}
+\index{showMenuAndGetChoice@{showMenuAndGetChoice}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{showMenuAndGetChoice()}{showMenuAndGetChoice()}}
+{\footnotesize\ttfamily int show\+Menu\+And\+Get\+Choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exibe o menu de opções para o usuário e obtém a escolha feita. 
+
+Limpa a tela e exibe um menu de opções numéricas para diferentes operações que podem ser realizadas na matriz (como visualizar a tabela de valores, modificar elementos, adicionar/remover linhas/colunas, e calcular a soma máxima). O usuário é solicitado a escolher uma opção, e a entrada é validada para garantir que seja um número correspondente a uma das opções. A função repete a solicitação até que uma entrada válida seja fornecida.
+
+\begin{DoxyReturn}{Retorna}
+A escolha do usuário como um inteiro, correspondendo a uma das opções do menu. 
+\end{DoxyReturn}
+
+
+Referências \mbox{\hyperlink{utils_8c_a22d7c3e857afba4903a76181f91ea9fb}{clear\+Input\+Buffer()}} e \mbox{\hyperlink{menu_8c_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\mbox{\Hypertarget{menu_8c_a003c17231846735a683b69486c821f9f}\label{menu_8c_a003c17231846735a683b69486c821f9f}} 
+\index{menu.c@{menu.c}!waitForUserInput@{waitForUserInput}}
+\index{waitForUserInput@{waitForUserInput}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{waitForUserInput()}{waitForUserInput()}}
+{\footnotesize\ttfamily void wait\+For\+User\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aguarda até que o usuário pressione Enter. 
+
+Exibe uma mensagem solicitando que o usuário pressione Enter para continuar. Primeiro, limpa o buffer de entrada para remover qualquer caractere residual que possa ter sido deixado por entradas anteriores. Então, entra em um loop de espera até que o usuário pressione Enter, garantindo que o programa só prossiga após a ação explícita do usuário. Essa função é útil para pausar a execução entre diferentes seções de um menu ou após a execução de uma tarefa, permitindo que o usuário tenha tempo para ler as informações exibidas antes de continuar. 
+
+Referenciado por \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+

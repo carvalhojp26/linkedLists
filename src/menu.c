@@ -4,6 +4,32 @@
 #include "utils.h"
 #include <stdlib.h>
 
+/**
+ * @file menu.c
+ * @brief Implementa a interface do usuário e as funções de solicitação para manipulação de matrizes.
+ *
+ * Este arquivo contém a lógica de interface do usuário necessária para interagir com o programa de manipulação
+ * de matrizes. Inclui a exibição de um menu com várias opções, como alterar um valor na matriz, adicionar ou
+ * remover linhas/colunas e calcular a soma máxima. Cada opção do menu é vinculada a uma função específica que
+ * realiza a operação desejada, solicitando entradas adicionais do usuário quando necessário. As funções de
+ * solicitação facilitam a coleta de dados de entrada do usuário para essas operações e chamam as funções lógicas
+ * apropriadas definidas em outros arquivos do projeto para executar as ações requisitadas.
+ *
+ * Além das funções de solicitação, o arquivo define `clearScreen` e `waitForUserInput`, que melhoram a
+ * experiência do usuário ao interagir com o menu e visualizar os resultados das operações executadas.
+ *
+ * Principais funções incluídas:
+ * - `requestUpdateValue`: Solicita ao usuário para atualizar um valor específico na matriz.
+ * - `requestAddRow`: Solicita ao usuário para adicionar uma nova linha na matriz.
+ * - `requestAddColumn`: Solicita ao usuário para adicionar uma nova coluna na matriz.
+ * - `requestRemoveRow`: Solicita ao usuário para remover uma linha específica da matriz.
+ * - `requestRemoveColumn`: Solicita ao usuário para remover uma coluna específica da matriz.
+ * - `requestCalculateMaxSum`: Solicita ao usuário para calcular e exibir a soma máxima conforme as condições definidas.
+ * - `showMenuAndGetChoice`: Exibe o menu principal e coleta a escolha do usuário.
+ * - `clearScreen`: Limpa o terminal para uma visualização clara do menu e resultados.
+ * - `waitForUserInput`: Pausa a execução do programa até que o usuário pressione Enter, permitindo a visualização dos resultados.
+ */
+
 void requestUpdateValue(Node* head) {
     int oldValue, newValue;
 
@@ -157,10 +183,6 @@ int showMenuAndGetChoice() {
 	}
 }
 
-
-/**
- * @brief Limpa o ecra do terminal. Verifica o sistema operativo para executar o comando correto.
- */
 void clearScreen() {
 	#ifdef _WIN32
 	system("cls");
@@ -169,10 +191,6 @@ void clearScreen() {
 	#endif
 }
 
-
-/**
- * @brief Aguarda até que o utilizador pressione Enter.
- */
 void waitForUserInput() {
 	printf("\nPressione Enter para continuar...");
 	// Limpa qualquer caractere residual no buffer de entrada

@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho-EDA 2023/2024: Referência ao ficheiro src/utils.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ipca.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Trabalho-EDA 2023/2024
+   </div>
+   <div id="projectbrief">Documentação do trabalho de fim de periodo da disciplina de Estrutura de Dados Avançados.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle"><div class="title">Referência ao ficheiro utils.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fornece funções utilitárias para a manipulação de uma matriz representada como uma lista ligada bidimensional.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="logic_8h_source.html">logic.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ab7af0fb125d355fa76a2f01320bf4170"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#ab7af0fb125d355fa76a2f01320bf4170">createNode</a> (int data)</td></tr>
+<tr class="memdesc:ab7af0fb125d355fa76a2f01320bf4170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo nó para ser utilizado na matriz bidimensional representada por uma lista ligada.  <a href="utils_8c.html#ab7af0fb125d355fa76a2f01320bf4170">Mais...</a><br /></td></tr>
+<tr class="separator:ab7af0fb125d355fa76a2f01320bf4170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ed50dcca1da8b534f3889917f7db13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#ab3ed50dcca1da8b534f3889917f7db13">readFile</a> (char *filename)</td></tr>
+<tr class="memdesc:ab3ed50dcca1da8b534f3889917f7db13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê uma matriz de inteiros de um arquivo e constrói uma representação de lista ligada bidimensional.  <a href="utils_8c.html#ab3ed50dcca1da8b534f3889917f7db13">Mais...</a><br /></td></tr>
+<tr class="separator:ab3ed50dcca1da8b534f3889917f7db13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0329c6bdac7198293226963af76b1dfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a0329c6bdac7198293226963af76b1dfe">writeToFile</a> (<a class="el" href="structNode.html">Node</a> *head, const char *filename)</td></tr>
+<tr class="memdesc:a0329c6bdac7198293226963af76b1dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve o conteúdo da matriz representada por uma lista ligada bidimensional em um arquivo.  <a href="utils_8c.html#a0329c6bdac7198293226963af76b1dfe">Mais...</a><br /></td></tr>
+<tr class="separator:a0329c6bdac7198293226963af76b1dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53f3f841d53ad195c5f8e27eaca880d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#ad53f3f841d53ad195c5f8e27eaca880d">printList</a> (<a class="el" href="structNode.html">Node</a> *head)</td></tr>
+<tr class="memdesc:ad53f3f841d53ad195c5f8e27eaca880d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime a matriz representada por uma lista ligada bidimensional.  <a href="utils_8c.html#ad53f3f841d53ad195c5f8e27eaca880d">Mais...</a><br /></td></tr>
+<tr class="separator:ad53f3f841d53ad195c5f8e27eaca880d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe12de1cfeeae80fcd71de4e5632d4b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#afe12de1cfeeae80fcd71de4e5632d4b4">getDimensions</a> (<a class="el" href="structNode.html">Node</a> *head, int *numRows, int *numCols)</td></tr>
+<tr class="memdesc:afe12de1cfeeae80fcd71de4e5632d4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula as dimensões de uma matriz representada por uma lista ligada bidimensional.  <a href="utils_8c.html#afe12de1cfeeae80fcd71de4e5632d4b4">Mais...</a><br /></td></tr>
+<tr class="separator:afe12de1cfeeae80fcd71de4e5632d4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae3fa5e6cdf40c3604d4df9573cfb4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#aeae3fa5e6cdf40c3604d4df9573cfb4e">makeSquare</a> (<a class="el" href="structNode.html">Node</a> **head)</td></tr>
+<tr class="memdesc:aeae3fa5e6cdf40c3604d4df9573cfb4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajusta a matriz para ser quadrada, adicionando linhas ou colunas de zeros conforme necessário.  <a href="utils_8c.html#aeae3fa5e6cdf40c3604d4df9573cfb4e">Mais...</a><br /></td></tr>
+<tr class="separator:aeae3fa5e6cdf40c3604d4df9573cfb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc2414eead53037ae70894dca830fd84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#afc2414eead53037ae70894dca830fd84">calculateMaxSumUtil</a> (<a class="el" href="structNode.html">Node</a> *row, int *visited, int currentSum, int *<a class="el" href="utils_8c.html#a168e18330ed6960f927ae48ff8ff05a0">maxSum</a>, int numRows)</td></tr>
+<tr class="memdesc:afc2414eead53037ae70894dca830fd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função auxiliar recursiva para calcular a soma máxima de valores selecionados da matriz.  <a href="utils_8c.html#afc2414eead53037ae70894dca830fd84">Mais...</a><br /></td></tr>
+<tr class="separator:afc2414eead53037ae70894dca830fd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d7c3e857afba4903a76181f91ea9fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a22d7c3e857afba4903a76181f91ea9fb">clearInputBuffer</a> ()</td></tr>
+<tr class="memdesc:a22d7c3e857afba4903a76181f91ea9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpa o buffer de entrada do stdin.  <a href="utils_8c.html#a22d7c3e857afba4903a76181f91ea9fb">Mais...</a><br /></td></tr>
+<tr class="separator:a22d7c3e857afba4903a76181f91ea9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a168e18330ed6960f927ae48ff8ff05a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a168e18330ed6960f927ae48ff8ff05a0">maxSum</a> = 0</td></tr>
+<tr class="separator:a168e18330ed6960f927ae48ff8ff05a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p >Fornece funções utilitárias para a manipulação de uma matriz representada como uma lista ligada bidimensional. </p>
+<p >Este arquivo contém a implementação de várias funções utilitárias que apoiam a manipulação e visualização da matriz, incluindo a criação de novos nós, leitura e escrita de matrizes em arquivos, impressão da matriz no console, obtenção das dimensões da matriz, ajuste da matriz para garantir que seja quadrada e cálculo auxiliar para a soma máxima. Estas funções são essenciais para o funcionamento das funcionalidades oferecidas pelo programa, permitindo uma interação eficiente e eficaz com a estrutura de dados da matriz e com a persistência dos dados em arquivos.</p>
+<p >Principais funcionalidades incluídas:</p><ul>
+<li><code>createNode</code>: Aloca e inicializa um novo nó para a lista ligada.</li>
+<li><code>readFile</code>: Lê uma matriz de um arquivo e constrói uma representação de lista ligada bidimensional.</li>
+<li><code>writeToFile</code>: Escreve a matriz atualizada em um arquivo, preservando as alterações feitas pelo usuário.</li>
+<li><code>printList</code>: Exibe a matriz atual no console em um formato de tabela fácil de ler.</li>
+<li><code>getDimensions</code>: Calcula e retorna as dimensões atuais da matriz.</li>
+<li><code>makeSquare</code>: Ajusta a matriz para ser quadrada, adicionando linhas ou colunas de zeros conforme necessário.</li>
+<li><code>calculateMaxSumUtil</code>: Função auxiliar utilizada para calcular a soma máxima de valores selecionados da matriz.</li>
+<li><code>clearInputBuffer</code>: Limpa o buffer de entrada para evitar leituras indesejadas durante a coleta de entrada do usuário.</li>
+</ul>
+<p >Estas funções proporcionam uma base sólida para a realização de operações complexas sobre a matriz de maneira simples e direta. </p>
+</div><h2 class="groupheader">Documentação das funções</h2>
+<a id="afc2414eead53037ae70894dca830fd84" name="afc2414eead53037ae70894dca830fd84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc2414eead53037ae70894dca830fd84">&#9670;&#160;</a></span>calculateMaxSumUtil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calculateMaxSumUtil </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>visited</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentSum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>maxSum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numRows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função auxiliar recursiva para calcular a soma máxima de valores selecionados da matriz. </p>
+<p >Esta função é chamada recursivamente para explorar todas as possíveis combinações de seleção de nós na matriz, sob a condição de que apenas um nó por linha e por coluna seja escolhido. Ela utiliza um vetor de visitados <code>visited</code> para marcar as colunas já exploradas em cada caminho recursivo, evitando seleções repetidas e garantindo que a restrição de um nó por coluna seja respeitada.</p>
+<p >A cada chamada recursiva, a função avança para a próxima linha (<code>row-&gt;down</code>) e tenta adicionar o valor de cada nó acessível (não visitado) na linha atual ao <code>currentSum</code>. Se a última linha for atingida e o <code>currentSum</code> for maior que o <code>maxSum</code> atual, <code>maxSum</code> é atualizado com o valor de <code>currentSum</code>.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>Ponteiro para o nó atual que representa a linha sendo explorada na chamada recursiva. </td></tr>
+    <tr><td class="paramname">visited</td><td>Vetor que indica quais colunas já foram visitadas/consideradas na seleção atual. </td></tr>
+    <tr><td class="paramname">currentSum</td><td>Soma acumulada dos valores dos nós selecionados até o momento. </td></tr>
+    <tr><td class="paramname">maxSum</td><td>Ponteiro para o valor da maior soma encontrada durante a execução da função. </td></tr>
+    <tr><td class="paramname">numRows</td><td>Número total de linhas da matriz, usado para dimensionar o vetor <code>visited</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referências <a class="el" href="utils_8c.html#afc2414eead53037ae70894dca830fd84">calculateMaxSumUtil()</a>, <a class="el" href="structNode.html#a87c003c9f600e3fc58e6e90835f0b605">Node::data</a>, <a class="el" href="structNode.html#a6d689f64c938f6bd9ee742e7f0608477">Node::down</a>, <a class="el" href="utils_8c.html#a168e18330ed6960f927ae48ff8ff05a0">maxSum</a> e <a class="el" href="structNode.html#af99e7102380da88d7c079fa264230cf4">Node::right</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="logic_8c.html#a4f617da86e4bc9f6ab6e5b404cdb197c">calculateMaxSum()</a> e <a class="el" href="utils_8c.html#afc2414eead53037ae70894dca830fd84">calculateMaxSumUtil()</a>.</p>
+
+</div>
+</div>
+<a id="a22d7c3e857afba4903a76181f91ea9fb" name="a22d7c3e857afba4903a76181f91ea9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d7c3e857afba4903a76181f91ea9fb">&#9670;&#160;</a></span>clearInputBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearInputBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Limpa o buffer de entrada do stdin. </p>
+<p >Esta função lê e descarta caracteres do buffer de entrada até que um caractere de nova linha ('<br  />
+') ou o fim do arquivo (EOF) seja encontrado. É útil para remover caracteres indesejados ou não lidos após uma entrada de usuário, garantindo que leituras subsequentes de entrada funcionem como esperado. </p>
+
+<p class="reference">Referenciado por <a class="el" href="menu_8c.html#a5b1b32f0eea46571499df2ac1483f16e">showMenuAndGetChoice()</a>.</p>
+
+</div>
+</div>
+<a id="ab7af0fb125d355fa76a2f01320bf4170" name="ab7af0fb125d355fa76a2f01320bf4170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7af0fb125d355fa76a2f01320bf4170">&#9670;&#160;</a></span>createNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNode.html">Node</a> * createNode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um novo nó para ser utilizado na matriz bidimensional representada por uma lista ligada. </p>
+<p >Aloca memória para um novo nó da lista ligada e inicializa seus campos. O campo <code>data</code> é definido com o valor passado como argumento, enquanto os ponteiros <code>right</code> e <code>down</code>, que apontam, respectivamente, para o próximo nó na mesma linha e para o próximo nó na mesma coluna, são inicializados como NULL. Se a alocação de memória falhar, o programa exibe uma mensagem de erro e encerra a execução.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>O valor do inteiro a ser armazenado no novo nó. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um ponteiro para o novo nó criado. </dd></dl>
+
+<p class="reference">Referências <a class="el" href="structNode.html#a87c003c9f600e3fc58e6e90835f0b605">Node::data</a>, <a class="el" href="structNode.html#a6d689f64c938f6bd9ee742e7f0608477">Node::down</a> e <a class="el" href="structNode.html#af99e7102380da88d7c079fa264230cf4">Node::right</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="logic_8c.html#a06afd32182b21d56da67facf1133f391">addColumn()</a>, <a class="el" href="logic_8c.html#a2d85949356e14c170d573775b4021bf2">addRow()</a> e <a class="el" href="utils_8c.html#ab3ed50dcca1da8b534f3889917f7db13">readFile()</a>.</p>
+
+</div>
+</div>
+<a id="afe12de1cfeeae80fcd71de4e5632d4b4" name="afe12de1cfeeae80fcd71de4e5632d4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe12de1cfeeae80fcd71de4e5632d4b4">&#9670;&#160;</a></span>getDimensions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getDimensions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>numRows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>numCols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula as dimensões de uma matriz representada por uma lista ligada bidimensional. </p>
+<p >Através da travessia da estrutura da lista ligada bidimensional, esta função determina o número total de linhas e colunas na matriz. Os valores calculados são armazenados nas variáveis apontadas por <code>numRows</code> e <code>numCols</code>, respectivamente. A função inicia no nó cabeça da lista (<code>head</code>) e percorre a estrutura tanto na direção horizontal (para contar colunas) quanto na direção vertical (para contar linhas), atualizando os contadores conforme avança.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>Ponteiro para o nó cabeça da lista ligada bidimensional representando a matriz. </td></tr>
+    <tr><td class="paramname">numRows</td><td>Ponteiro para a variável onde o número total de linhas será armazenado. </td></tr>
+    <tr><td class="paramname">numCols</td><td>Ponteiro para a variável onde o número total de colunas será armazenado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referências <a class="el" href="structNode.html#a6d689f64c938f6bd9ee742e7f0608477">Node::down</a> e <a class="el" href="structNode.html#af99e7102380da88d7c079fa264230cf4">Node::right</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="utils_8c.html#aeae3fa5e6cdf40c3604d4df9573cfb4e">makeSquare()</a>, <a class="el" href="menu_8c.html#af48df06705af95435adfab441132ccb8">requestAddColumn()</a>, <a class="el" href="menu_8c.html#a9afb2edea4b2c989f3c8ec396d9edc3b">requestAddRow()</a>, <a class="el" href="menu_8c.html#aaa9183693b51b20c09b87f650702662e">requestCalculateMaxSum()</a>, <a class="el" href="menu_8c.html#a63bf929c512eb27e46af86f9fd9b2b62">requestRemoveColumn()</a> e <a class="el" href="menu_8c.html#aeba29f48046200a3685c0a8db4a74b18">requestRemoveRow()</a>.</p>
+
+</div>
+</div>
+<a id="aeae3fa5e6cdf40c3604d4df9573cfb4e" name="aeae3fa5e6cdf40c3604d4df9573cfb4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae3fa5e6cdf40c3604d4df9573cfb4e">&#9670;&#160;</a></span>makeSquare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void makeSquare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> **&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajusta a matriz para ser quadrada, adicionando linhas ou colunas de zeros conforme necessário. </p>
+<p >Avalia as dimensões atuais da matriz e determina se é necessário adicionar linhas ou colunas para torná-la quadrada. Linhas ou colunas adicionais são preenchidas com zeros. Esta operação é essencial para garantir que a matriz atenda aos requisitos de determinados algoritmos que assumem uma estrutura quadrada. Os ajustes são feitos in-place na estrutura de lista ligada bidimensional, e a matriz ajustada é opcionalmente escrita de volta ao arquivo especificado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>Referência ao ponteiro para o nó cabeça da lista ligada bidimensional. </td></tr>
+    <tr><td class="paramname">filename</td><td>Nome do arquivo onde a matriz ajustada pode ser escrita. Este parâmetro é usado apenas se linhas ou colunas forem efetivamente adicionadas à matriz. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referências <a class="el" href="logic_8c.html#a06afd32182b21d56da67facf1133f391">addColumn()</a>, <a class="el" href="logic_8c.html#a2d85949356e14c170d573775b4021bf2">addRow()</a> e <a class="el" href="utils_8c.html#afe12de1cfeeae80fcd71de4e5632d4b4">getDimensions()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="menu_8c.html#aaa9183693b51b20c09b87f650702662e">requestCalculateMaxSum()</a>.</p>
+
+</div>
+</div>
+<a id="ad53f3f841d53ad195c5f8e27eaca880d" name="ad53f3f841d53ad195c5f8e27eaca880d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53f3f841d53ad195c5f8e27eaca880d">&#9670;&#160;</a></span>printList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime a matriz representada por uma lista ligada bidimensional. </p>
+<p >Esta função percorre a estrutura de lista ligada bidimensional apontada por <code>head</code>, imprimindo cada valor de nó em um formato de tabela. Cada célula da tabela é delimitada por linhas horizontais e verticais, com cada valor alinhado à direita dentro de uma largura fixa. A função assume que os valores dos nós têm até três dígitos. Esta representação visual facilita a compreensão da estrutura da matriz no console.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>Ponteiro para o nó cabeça da lista ligada bidimensional representando a matriz. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referências <a class="el" href="structNode.html#a87c003c9f600e3fc58e6e90835f0b605">Node::data</a>, <a class="el" href="structNode.html#a6d689f64c938f6bd9ee742e7f0608477">Node::down</a> e <a class="el" href="structNode.html#af99e7102380da88d7c079fa264230cf4">Node::right</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+
+</div>
+</div>
+<a id="ab3ed50dcca1da8b534f3889917f7db13" name="ab3ed50dcca1da8b534f3889917f7db13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ed50dcca1da8b534f3889917f7db13">&#9670;&#160;</a></span>readFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNode.html">Node</a> * readFile </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê uma matriz de inteiros de um arquivo e constrói uma representação de lista ligada bidimensional. </p>
+<p >Abre o arquivo especificado por <code>filename</code> e lê sua conteúdo linha por linha, onde os valores inteiros são esperados estar separados por ponto e vírgula (<code>;</code>). Cada linha do arquivo corresponde a uma linha da matriz e cada valor é inserido em um novo nó na lista ligada. Os nós são conectados tanto horizontalmente (na mesma linha) quanto verticalmente (na mesma coluna) para formar a estrutura bidimensional. A função retorna um ponteiro para o nó cabeça da lista ligada, que representa o canto superior esquerdo da matriz. Em caso de falha ao abrir o arquivo, o programa exibe uma mensagem de erro e termina.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo de onde a matriz será lida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um ponteiro para o nó cabeça da lista ligada bidimensional que representa a matriz lida. </dd></dl>
+
+<p class="reference">Referências <a class="el" href="utils_8c.html#ab7af0fb125d355fa76a2f01320bf4170">createNode()</a>, <a class="el" href="structNode.html#a6d689f64c938f6bd9ee742e7f0608477">Node::down</a> e <a class="el" href="structNode.html#af99e7102380da88d7c079fa264230cf4">Node::right</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+
+</div>
+</div>
+<a id="a0329c6bdac7198293226963af76b1dfe" name="a0329c6bdac7198293226963af76b1dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0329c6bdac7198293226963af76b1dfe">&#9670;&#160;</a></span>writeToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void writeToFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve o conteúdo da matriz representada por uma lista ligada bidimensional em um arquivo. </p>
+<p >Esta função abre o arquivo especificado por <code>filename</code> para escrita e percorre a estrutura de lista ligada bidimensional apontada por <code>head</code>, escrevendo os dados de cada nó no arquivo. Os valores dentro de uma mesma linha são separados por ponto e vírgula (<code>;</code>), e cada linha da matriz é escrita em uma nova linha no arquivo. Se não for possível abrir o arquivo para escrita, a função exibirá uma mensagem de erro e terminará o programa.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>Ponteiro para o nó cabeça da lista ligada bidimensional representando a matriz. </td></tr>
+    <tr><td class="paramname">filename</td><td>Nome do arquivo no qual a matriz será escrita. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referências <a class="el" href="structNode.html#a87c003c9f600e3fc58e6e90835f0b605">Node::data</a>, <a class="el" href="structNode.html#a6d689f64c938f6bd9ee742e7f0608477">Node::down</a> e <a class="el" href="structNode.html#af99e7102380da88d7c079fa264230cf4">Node::right</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="logic_8c.html#a06afd32182b21d56da67facf1133f391">addColumn()</a>, <a class="el" href="logic_8c.html#a2d85949356e14c170d573775b4021bf2">addRow()</a>, <a class="el" href="logic_8c.html#a0c4da4391039f715b8ca6b8c5fa36ddb">removeColumn()</a>, <a class="el" href="logic_8c.html#a6be1625af37b04b50c220f95a394f4ec">removeRow()</a> e <a class="el" href="logic_8c.html#a12ed6826106093af1698d49ffeb6d298">updateValue()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das variáveis</h2>
+<a id="a168e18330ed6960f927ae48ff8ff05a0" name="a168e18330ed6960f927ae48ff8ff05a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a168e18330ed6960f927ae48ff8ff05a0">&#9670;&#160;</a></span>maxSum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int maxSum = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenciado por <a class="el" href="logic_8c.html#a4f617da86e4bc9f6ab6e5b404cdb197c">calculateMaxSum()</a>, <a class="el" href="utils_8c.html#afc2414eead53037ae70894dca830fd84">calculateMaxSumUtil()</a> e <a class="el" href="menu_8c.html#aaa9183693b51b20c09b87f650702662e">requestCalculateMaxSum()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>
