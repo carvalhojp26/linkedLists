@@ -15,6 +15,7 @@ Node* createNode(int data) {
     newNode->down = NULL;
     return newNode;
 }
+
 void writeToFile(Node* head, const char* filename) {
     FILE* file = fopen(filename, "w");
     if (file == NULL) {
@@ -331,94 +332,68 @@ int calculateMaxSum(Node* head, int numRows) {
     return maxSum;
 }
 
-void getDimensions(Node* head, int* numRows, int* numCols) {
+void getDimensions(Node *head, int *numRows, int *numCols) {
     *numRows = 0;
     *numCols = 0;
-    Node* row = head;
-    if (row) {
-        *numRows = 1;
-        Node* col = row;
-        while (col->right) {
-            (*numCols)++;
-            col = col->right;
+    Node *row = head, *col = head;
+    while (row) {
+        (*numRows)++;
+        row = row->down;
+    }
+    while (col) {
+        (*numCols)++;
+        col = col->right;
+    }
+}
+
+void makeSquare(Node **head) {
+    int numRows, numCols;
+    getDimensions(*head, &numRows, &numCols);
+
+    int diff = abs(numRows - numCols);
+    if (diff == 0) {
+        // A matriz já é quadrada.
+        return;
+    }
+
+    int *zeroData = (int *)calloc(diff, sizeof(int));
+    const char* filename = "data.txt"; // Definindo o nome do arquivo para uso
+    if (numRows < numCols) {
+        // Adiciona linhas de zeros.
+        for (int i = 0; i < diff; i++) {
+            *head = addRow(*head, zeroData, numCols, filename);
         }
-        (*numCols)++; // Conta a primeira coluna
-        while (row->down) {
-            (*numRows)++;
-            row = row->down;
+    } else {
+        // Adiciona colunas de zeros.
+        for (int i = 0; i < diff; i++) {
+            addColumn(*head, zeroData, filename);
         }
     }
+
+    free(zeroData);
 }
 
 int main() {
     char* filename = "data.txt";
+    Node* list = readFile(filename); // Leia a matriz do arquivo.
+
+    printf("Matriz original:\n");
+    printList(list); // Imprime a matriz original lida do arquivo.
+
+    makeSquare(&list); // Ajusta a matriz para ser quadrada, se necessário.
+
+    printf("\nMatriz após ajuste para ser quadrada (se necessário):\n");
+    printList(list); // Imprime a matriz após ajuste para ser quadrada.
+
+    // Calcula a soma máxima na matriz ajustada para ser quadrada.
     int numRows, numCols;
-    Node* list = readFile(filename);
+    getDimensions(list, &numRows, &numCols); // Obtém as dimensões da matriz ajustada.
+    int maxSum = calculateMaxSum(list, numRows); // Assume que a matriz agora é quadrada.
 
-    printList(list);
+    printf("\nSoma máxima: %d\n", maxSum); // Exibe a soma máxima calculada.
 
-    printf("\n");
-    updateValue(list, 63, 69);
-    printList(list);
+    // Lembre-se de liberar a memória alocada para a lista ligada no final.
+    // freeMatrix(list); // Esta função deve ser implementada para liberar toda a memória alocada.
 
-    printf("\n");
-    int newRowData[] = {888, 888, 888, 888, 888};
-    int newRowSize = sizeof(newRowData) / sizeof(newRowData[0]);
-    addRow(list, newRowData, newRowSize, filename);
-    printf("Lista após adicionar nova linha:\n");
-    printList(list);
-
-
-    printf("\n");
-    // Dados para a nova coluna
-    int newColumnData[] = {999, 999, 999, 999, 999, 999}; // Assumindo 3 linhas na lista ligada 2D
-    addColumn(list, newColumnData, filename);
-
-    // Imprimir a lista após a adição para verificar
-    printf("Lista após adicionar nova coluna:\n");
-    printList(list);
-
-
-    printf("\n");
-  
-    // Verifica se a matriz é quadrada
-    if (numRows != numCols) {
-        int diff = abs(numRows - numCols);
-        int zeroData[diff]; // Array preenchido com zeros
-        memset(zeroData, 0, sizeof(zeroData));
-
-        if (numRows < numCols) {
-            // Adiciona linhas de zeros
-            for (int i = 0; i < diff; i++) {
-                head = addRow(head, zeroData, numCols, "matrix.txt"); // Atualize o nome do arquivo conforme necessário
-            }
-        } else {
-            // Adiciona colunas de zeros
-            addColumn(head, zeroData, "matrix.txt"); // Atualize o nome do arquivo conforme necessário
-        }
-    }
-
-    // Calcula a soma máxima
-    int maxSum = calculateMaxSum(head, numRows > numCols ? numRows : numCols);
-
-    // Remove as linhas/colunas de zeros adicionadas, se necessário
-    if (numRows != numCols) {
-        int diff = abs(numRows - numCols);
-        if (numRows < numCols) {
-            // Remove as linhas adicionadas
-            for (int i = 0; i < diff; i++) {
-                head = removeRow(head, numRows + i, "matrix.txt"); // Atualize o índice conforme necessário
-            }
-        } else {
-            // Remove as colunas adicionadas
-            for (int i = 0; i < diff; i++) {
-                removeColumn(head, numCols, "matrix.txt"); // Atualize o índice conforme necessário
-            }
-        }
-    }
-
-    printf("Soma máxima: %d\n", maxSum);
-
-    // Lembre-se de liberar a memória depois
     return 0;
 }
